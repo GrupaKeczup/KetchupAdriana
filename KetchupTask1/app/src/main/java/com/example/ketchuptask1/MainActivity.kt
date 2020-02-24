@@ -1,32 +1,36 @@
 package com.example.ketchuptask1
 
-import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.AttributeSet
-import android.widget.ProgressBar
 import android.widget.SeekBar
 import kotlinx.android.synthetic.main.activity_main.*
+import java.lang.Math.abs
 
 class MainActivity : AppCompatActivity() {
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        val imglist = listOf(R.drawable.download, R.drawable.download1, R.drawable.download2,
+                            R.drawable.images, R.drawable.images1)
+
+        //val image = File("C:\\Users\\stranadr\\Pictures\\lo.jpg")
+
 
         btn_plus.setOnClickListener {
             var num: Int = num_value.text.toString().toInt()
             num_value.text = (++num).toString()
+            img2.setImageResource(imglist[abs(num%imglist.size)])
         }
 
         btn_minus.setOnClickListener {
             var num: Int = num_value.text.toString().toInt()
             num_value.text = (--num).toString()
+            img2.setImageResource(imglist[abs(num%imglist.size)])
         }
 
-        seek_bar.min = 0;
-        seek_bar.max = 100;
-        seek_bar.progress = 0;
+        seek_bar.min = 0
+        seek_bar.max = 100
+        seek_bar.progress = 0
         seek_bar.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
             override fun onProgressChanged(seekBar: SeekBar?, progress: Int, fromUser: Boolean)
             {

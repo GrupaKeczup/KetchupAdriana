@@ -8,8 +8,7 @@
 
     <TextView
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        />
+        android:layout_height="wrap_content"/>
 
     <RelativeLayout
         android:id="@+id/lay_increment_buttons"
@@ -24,8 +23,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:layout_centerHorizontal="true"
-            android:text="+"
-            />
+            android:text="+" />
 
         <TextView
             android:id="@+id/num_value"
@@ -33,19 +31,15 @@
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
-            android:text="0">
-
-        </TextView>
+            android:text="0"/>
 
         <Button
             android:id="@+id/btn_minus"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
-            android:text="-"
-            />
+            android:text="-" />
     </RelativeLayout>
-
 
     <RelativeLayout
         android:id="@+id/lay_slider"
@@ -53,15 +47,13 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:orientation="horizontal"
-        android:layout_below="@+id/lay_increment_buttons"
-        >
+        android:layout_below="@+id/lay_increment_buttons">
 
         <SeekBar
             android:id="@+id/seek_bar"
             android:layout_width="300dp"
             android:layout_height="50dp"
-            style="?android:attr/progressBarStyleHorizontal"
-            >
+            style="?android:attr/progressBarStyleHorizontal">
         </SeekBar>
 
         <TextView
@@ -72,18 +64,23 @@
             android:layout_centerHorizontal="true"
             android:textAlignment="center"
             android:textColor="@color/colorPrimaryDark"
-            android:text="0"
-            >
-
+            android:text="0">
         </TextView>
-        <!--<ProgressBar
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            style="?android:attr/progressBarStyleHorizontal"
-
-            ></ProgressBar>-->
-
     </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/lay_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal"
+        android:layout_below="@+id/lay_slider">
 
-
+        <ImageView
+            android:id="@+id/img"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_alignParentLeft="true"
+            android:src="@drawable/download">
+        </ImageView>
+    </RelativeLayout>
 </RelativeLayout>
