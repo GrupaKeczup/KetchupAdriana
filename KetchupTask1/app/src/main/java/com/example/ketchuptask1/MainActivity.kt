@@ -3,6 +3,7 @@ package com.example.ketchuptask1
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.SeekBar
+import coil.api.load
 import kotlinx.android.synthetic.main.activity_main.*
 import java.lang.Math.abs
 
@@ -19,13 +20,13 @@ class MainActivity : AppCompatActivity() {
         btn_plus.setOnClickListener {
             var num: Int = num_value.text.toString().toInt()
             num_value.text = (++num).toString()
-            img2.setImageResource(imglist[abs(num%imglist.size)])
+            img.setImageResource(imglist[abs(num%imglist.size)])
         }
 
         btn_minus.setOnClickListener {
             var num: Int = num_value.text.toString().toInt()
             num_value.text = (--num).toString()
-            img2.setImageResource(imglist[abs(num%imglist.size)])
+            img.setImageResource(imglist[abs(num%imglist.size)])
         }
 
         seek_bar.min = 0
@@ -45,5 +46,12 @@ class MainActivity : AppCompatActivity() {
                 //To change body of created functions use File | Settings | File Templates.
             }
         })
+
+        random.setOnClickListener {
+            var rng: Int = (0..1000).random()
+            val link = "https://i.picsum.photos/id/" + rng.toString() + "/100/100.jpg".toLowerCase()
+            //img2.load(link)
+            random.text = link
+        }
     }
 }

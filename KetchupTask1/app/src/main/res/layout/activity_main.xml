@@ -15,7 +15,7 @@
         android:layout_centerHorizontal="true"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="100dp">
+        android:layout_marginTop="10dp">
 
         <Button
             android:id="@+id/btn_plus"
@@ -82,5 +82,29 @@
             android:layout_alignParentLeft="true"
             android:src="@drawable/download">
         </ImageView>
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/lay_https_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal"
+        android:layout_below="@+id/lay_image">
+
+        <Button
+            android:id="@+id/random"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="random">
+        </Button>
+
+        <ImageView
+            android:id="@+id/img2"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_below="@+id/random">
+        </ImageView>
+
     </RelativeLayout>
 </RelativeLayout>
