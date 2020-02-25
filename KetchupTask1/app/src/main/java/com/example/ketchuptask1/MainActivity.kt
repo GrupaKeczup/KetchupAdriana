@@ -50,7 +50,7 @@ class MainActivity : AppCompatActivity() {
         random.setOnClickListener {
             var rng: Int = (0..1000).random()
             val link = "https://i.picsum.photos/id/" + rng.toString() + "/100/100.jpg".toLowerCase()
-            //img2.load(link)
+            img2.load(link)
             random.text = link
         }
     }
